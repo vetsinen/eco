@@ -6,7 +6,7 @@ app = Flask(__name__)
 cors = CORS(app, resources={r"*": {"origins": "*"}})
 
 
-@app.route('/data')
+@app.route('/')
 def get_data():
     features = {
         {
