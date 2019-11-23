@@ -8,7 +8,7 @@ cors = CORS(app, resources={r"*": {"origins": "*"}})
 
 @app.route('/')
 def get_data():
-    features = {
+    features = [
         {
             "type": "Feature",
             "geometry": {"type": "Point",
@@ -20,7 +20,7 @@ def get_data():
             "geometry": {"type": "Point", "coordinates": [102.0, 0.5]},
             "properties": {"name": "value0", "note": "note"}
         }
-    }
+    ]
 
     return jsonify(features)
 
